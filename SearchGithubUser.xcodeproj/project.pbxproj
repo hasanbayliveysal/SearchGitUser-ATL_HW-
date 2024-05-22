@@ -8,22 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		FC900E432BFE7CF300036443 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC900E422BFE7CF300036443 /* AppDelegate.swift */; };
-		FC900E452BFE7CF300036443 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC900E442BFE7CF300036443 /* SceneDelegate.swift */; };
-		FC900E472BFE7CF300036443 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC900E462BFE7CF300036443 /* ViewController.swift */; };
-		FC900E4A2BFE7CF300036443 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC900E482BFE7CF300036443 /* Main.storyboard */; };
+		FC900E472BFE7CF300036443 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC900E462BFE7CF300036443 /* MainViewController.swift */; };
 		FC900E4C2BFE7CF800036443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC900E4B2BFE7CF800036443 /* Assets.xcassets */; };
 		FC900E4F2BFE7CF800036443 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC900E4D2BFE7CF800036443 /* LaunchScreen.storyboard */; };
+		FC900E5E2BFE7E3900036443 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC900E5D2BFE7E3900036443 /* MainViewModel.swift */; };
+		FC900E602BFE7E7A00036443 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC900E5F2BFE7E7A00036443 /* NetworkManager.swift */; };
+		FC900E632BFE7EB700036443 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FC900E622BFE7EB700036443 /* SnapKit */; };
+		FC900E662BFE7EF300036443 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FC900E652BFE7EF300036443 /* Alamofire */; };
+		FC900E692BFE7F2300036443 /* TitleSubtitleSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC900E682BFE7F2300036443 /* TitleSubtitleSV.swift */; };
+		FC900E6B2BFE822C00036443 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC900E6A2BFE822C00036443 /* HeaderView.swift */; };
+		FC900E6E2BFE8AC500036443 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC900E6D2BFE8AC500036443 /* User.swift */; };
+		FC900E712BFE8F7A00036443 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FC900E702BFE8F7A00036443 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FC900E3F2BFE7CF300036443 /* SearchGithubUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchGithubUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC900E422BFE7CF300036443 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC900E442BFE7CF300036443 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FC900E462BFE7CF300036443 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FC900E492BFE7CF300036443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC900E462BFE7CF300036443 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FC900E4B2BFE7CF800036443 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC900E4E2BFE7CF800036443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC900E502BFE7CF800036443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC900E5D2BFE7E3900036443 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		FC900E5F2BFE7E7A00036443 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FC900E682BFE7F2300036443 /* TitleSubtitleSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleSV.swift; sourceTree = "<group>"; };
+		FC900E6A2BFE822C00036443 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		FC900E6D2BFE8AC500036443 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC900E712BFE8F7A00036443 /* Kingfisher in Frameworks */,
+				FC900E632BFE7EB700036443 /* SnapKit in Frameworks */,
+				FC900E662BFE7EF300036443 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +68,82 @@
 		FC900E412BFE7CF300036443 /* SearchGithubUser */ = {
 			isa = PBXGroup;
 			children = (
-				FC900E422BFE7CF300036443 /* AppDelegate.swift */,
-				FC900E442BFE7CF300036443 /* SceneDelegate.swift */,
-				FC900E462BFE7CF300036443 /* ViewController.swift */,
-				FC900E482BFE7CF300036443 /* Main.storyboard */,
+				FC900E5A2BFE7E0B00036443 /* Managers */,
+				FC900E562BFE7DE200036443 /* Screens */,
+				FC900E572BFE7DEB00036443 /* Others */,
 				FC900E4B2BFE7CF800036443 /* Assets.xcassets */,
 				FC900E4D2BFE7CF800036443 /* LaunchScreen.storyboard */,
 				FC900E502BFE7CF800036443 /* Info.plist */,
 			);
 			path = SearchGithubUser;
+			sourceTree = "<group>";
+		};
+		FC900E562BFE7DE200036443 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FC900E6C2BFE8ABC00036443 /* Model */,
+				FC900E592BFE7E0200036443 /* VM */,
+				FC900E582BFE7DFB00036443 /* VC */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		FC900E572BFE7DEB00036443 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				FC900E422BFE7CF300036443 /* AppDelegate.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		FC900E582BFE7DFB00036443 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				FC900E672BFE7EFD00036443 /* CustomViews */,
+				FC900E462BFE7CF300036443 /* MainViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		FC900E592BFE7E0200036443 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				FC900E5D2BFE7E3900036443 /* MainViewModel.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		FC900E5A2BFE7E0B00036443 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FC900E5B2BFE7E1400036443 /* NetworkManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		FC900E5B2BFE7E1400036443 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				FC900E5F2BFE7E7A00036443 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		FC900E672BFE7EFD00036443 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				FC900E682BFE7F2300036443 /* TitleSubtitleSV.swift */,
+				FC900E6A2BFE822C00036443 /* HeaderView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		FC900E6C2BFE8ABC00036443 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC900E6D2BFE8AC500036443 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +162,11 @@
 			dependencies = (
 			);
 			name = SearchGithubUser;
+			packageProductDependencies = (
+				FC900E622BFE7EB700036443 /* SnapKit */,
+				FC900E652BFE7EF300036443 /* Alamofire */,
+				FC900E702BFE8F7A00036443 /* Kingfisher */,
+			);
 			productName = SearchGithubUser;
 			productReference = FC900E3F2BFE7CF300036443 /* SearchGithubUser.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +195,11 @@
 				Base,
 			);
 			mainGroup = FC900E362BFE7CF300036443;
+			packageReferences = (
+				FC900E612BFE7EB700036443 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				FC900E642BFE7EF300036443 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				FC900E6F2BFE8F7A00036443 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = FC900E402BFE7CF300036443 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +216,6 @@
 			files = (
 				FC900E4F2BFE7CF800036443 /* LaunchScreen.storyboard in Resources */,
 				FC900E4C2BFE7CF800036443 /* Assets.xcassets in Resources */,
-				FC900E4A2BFE7CF300036443 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +226,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC900E472BFE7CF300036443 /* ViewController.swift in Sources */,
+				FC900E602BFE7E7A00036443 /* NetworkManager.swift in Sources */,
+				FC900E6B2BFE822C00036443 /* HeaderView.swift in Sources */,
+				FC900E472BFE7CF300036443 /* MainViewController.swift in Sources */,
 				FC900E432BFE7CF300036443 /* AppDelegate.swift in Sources */,
-				FC900E452BFE7CF300036443 /* SceneDelegate.swift in Sources */,
+				FC900E5E2BFE7E3900036443 /* MainViewModel.swift in Sources */,
+				FC900E692BFE7F2300036443 /* TitleSubtitleSV.swift in Sources */,
+				FC900E6E2BFE8AC500036443 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FC900E482BFE7CF300036443 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC900E492BFE7CF300036443 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FC900E4D2BFE7CF800036443 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +376,6 @@
 				INFOPLIST_FILE = SearchGithubUser/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +403,6 @@
 				INFOPLIST_FILE = SearchGithubUser/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +440,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FC900E612BFE7EB700036443 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		FC900E642BFE7EF300036443 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		FC900E6F2BFE8F7A00036443 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FC900E622BFE7EB700036443 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC900E612BFE7EB700036443 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		FC900E652BFE7EF300036443 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC900E642BFE7EF300036443 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		FC900E702BFE8F7A00036443 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC900E6F2BFE8F7A00036443 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FC900E372BFE7CF300036443 /* Project object */;
 }
