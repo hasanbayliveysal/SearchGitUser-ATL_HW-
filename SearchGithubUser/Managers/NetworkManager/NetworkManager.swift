@@ -12,7 +12,7 @@ protocol NetworkManagerProtocol {
     func getUserInformation(with username: String, completion: @escaping ((Result<User, AFError>)->Void))
 }
 
-class NetworkManager: NetworkManagerProtocol {
+final class NetworkManager: NetworkManagerProtocol {
     static let shared: NetworkManagerProtocol = NetworkManager()
     
     func getUserInformation(with username: String, completion: @escaping ((Result<User, AFError>)->Void)) {

@@ -10,7 +10,7 @@ import SnapKit
 
 class TitleSubtitleSV: UIStackView {
     let title: String
-    let subtitle: String
+    let subtitle: String?
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -23,12 +23,14 @@ class TitleSubtitleSV: UIStackView {
     private lazy var subtitleLabel: UILabel = {
         let label = UILabel()
         label.text = subtitle
+        label.numberOfLines = 0
+        label.textAlignment = .center
         label.textColor = .black
         label.font = .systemFont(ofSize: 12, weight: .semibold)
         return label
     }()
     
-    init(title: String, subtitle: String, frame: CGRect = .zero) {
+    init(title: String, subtitle: String?, frame: CGRect = .zero) {
         self.title = title
         self.subtitle = subtitle
         super.init(frame: .zero)
@@ -40,6 +42,7 @@ class TitleSubtitleSV: UIStackView {
     }
     
     private func configure() {
+        subtitleLabel.isHidden = (subtitle == nil)
         alignment = .center
         axis = .vertical
         spacing = 4

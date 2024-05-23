@@ -16,8 +16,8 @@ class HeaderView: UIView {
         sv.spacing = 16
         return sv
     }()
-    private let searchTF: UITextField = {
-        let tf = UITextField()
+    private let searchTF: InsetTextField = {
+        let tf = InsetTextField()
         tf.placeholder = "Write username"
         tf.layer.cornerRadius = 12
         tf.layer.borderColor = UIColor.label.cgColor
@@ -28,11 +28,9 @@ class HeaderView: UIView {
     private let searchButton: UIButton = {
         let button = UIButton()
         button.setTitle("Search", for: .normal)
-        button.setTitleColor(UIColor.black, for: .normal)
+        button.setTitleColor(UIColor.white, for: .normal)
         button.layer.cornerRadius = 12
-        button.backgroundColor = .systemBlue
-        button.layer.borderColor = UIColor.black.cgColor
-        button.layer.borderWidth = 1
+        button.backgroundColor = .blue
         return button
     }()
     override init(frame: CGRect) {
@@ -62,4 +60,7 @@ class HeaderView: UIView {
         searchButton.addTarget(target, action: action, for: event)
     }
     
+    func clearTextField() {
+        self.searchTF.text = ""
+    }
 }

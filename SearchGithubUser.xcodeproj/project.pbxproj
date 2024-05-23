@@ -19,6 +19,9 @@
 		FC900E6B2BFE822C00036443 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC900E6A2BFE822C00036443 /* HeaderView.swift */; };
 		FC900E6E2BFE8AC500036443 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC900E6D2BFE8AC500036443 /* User.swift */; };
 		FC900E712BFE8F7A00036443 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FC900E702BFE8F7A00036443 /* Kingfisher */; };
+		FC900E742BFF95E000036443 /* UIStackView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC900E732BFF95E000036443 /* UIStackView+Ex.swift */; };
+		FC900E762BFF9AA500036443 /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC900E752BFF9AA500036443 /* InsetTextField.swift */; };
+		FC900E782BFF9BAF00036443 /* UIViewController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC900E772BFF9BAF00036443 /* UIViewController+Ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		FC900E682BFE7F2300036443 /* TitleSubtitleSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleSV.swift; sourceTree = "<group>"; };
 		FC900E6A2BFE822C00036443 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		FC900E6D2BFE8AC500036443 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FC900E732BFF95E000036443 /* UIStackView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Ex.swift"; sourceTree = "<group>"; };
+		FC900E752BFF9AA500036443 /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
+		FC900E772BFF9BAF00036443 /* UIViewController+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 		FC900E412BFE7CF300036443 /* SearchGithubUser */ = {
 			isa = PBXGroup;
 			children = (
+				FC900E722BFF95CE00036443 /* Extentions */,
 				FC900E5A2BFE7E0B00036443 /* Managers */,
 				FC900E562BFE7DE200036443 /* Screens */,
 				FC900E572BFE7DEB00036443 /* Others */,
@@ -134,6 +141,7 @@
 			children = (
 				FC900E682BFE7F2300036443 /* TitleSubtitleSV.swift */,
 				FC900E6A2BFE822C00036443 /* HeaderView.swift */,
+				FC900E752BFF9AA500036443 /* InsetTextField.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -144,6 +152,15 @@
 				FC900E6D2BFE8AC500036443 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FC900E722BFF95CE00036443 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				FC900E732BFF95E000036443 /* UIStackView+Ex.swift */,
+				FC900E772BFF9BAF00036443 /* UIViewController+Ex.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,12 +244,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC900E602BFE7E7A00036443 /* NetworkManager.swift in Sources */,
+				FC900E782BFF9BAF00036443 /* UIViewController+Ex.swift in Sources */,
 				FC900E6B2BFE822C00036443 /* HeaderView.swift in Sources */,
 				FC900E472BFE7CF300036443 /* MainViewController.swift in Sources */,
 				FC900E432BFE7CF300036443 /* AppDelegate.swift in Sources */,
 				FC900E5E2BFE7E3900036443 /* MainViewModel.swift in Sources */,
 				FC900E692BFE7F2300036443 /* TitleSubtitleSV.swift in Sources */,
+				FC900E742BFF95E000036443 /* UIStackView+Ex.swift in Sources */,
 				FC900E6E2BFE8AC500036443 /* User.swift in Sources */,
+				FC900E762BFF9AA500036443 /* InsetTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

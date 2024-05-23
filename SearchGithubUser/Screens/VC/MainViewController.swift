@@ -8,8 +8,14 @@
 import UIKit
 import Kingfisher
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
     private let vm: MainViewModel = MainViewModel()
+    private var lastSearchedText: String? = nil
+    private let activityIndicator: UIActivityIndicatorView = {
+        let av = UIActivityIndicatorView()
+        av.hidesWhenStopped = true
+        return av
+    }()
     private lazy var headerView: HeaderView = {
         let view = HeaderView()
         view.addTargetSearchButton(self, action: #selector(didTapSearchButton), for: .touchUpInside)
@@ -41,29 +47,37 @@ class MainViewController: UIViewController {
 extension MainViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
         setup()
     }
     
     private func setup() {
-        view.addSubview(mainStackView)
+        view.backgroundColor = .systemBackground
         view.addSubview(headerView)
+        view.addSubview(mainStackView)
+        view.addSubview(activityIndicator)
+        headerView.snp.makeConstraints { make in
+            make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(16)
+        }
+        activityIndicator.snp.makeConstraints { make in
+            make.centerX.centerY.equalToSuperview()
+        }
+    }
+    
+    private func setup(with user: User) {
         [centerImageView,
-         TitleSubtitleSV(title: "Username", subtitle: "Bio"),
+         TitleSubtitleSV(title: user.name, subtitle: user.bio),
          userInfoSV]
             .forEach({mainStackView.addArrangedSubview($0)})
         
-        [TitleSubtitleSV(title: "180", subtitle: "Followers"),
-         TitleSubtitleSV(title: "20", subtitle: "Following"),
-         TitleSubtitleSV(title: "20", subtitle: "Github Repos")]
+        [TitleSubtitleSV(title: "\(user.followers)", subtitle: "Followers"),
+         TitleSubtitleSV(title:  "\(user.following)", subtitle: "Following"),
+         TitleSubtitleSV(title:  "\(user.reposCount)", subtitle: "Github Repos")]
             .forEach({userInfoSV.addArrangedSubview($0)})
+        centerImageView.kf.setImage(with: URL(string: user.image))
         setupConstraints()
     }
     
     private func setupConstraints(){
-        headerView.snp.makeConstraints { make in
-            make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(16)
-        }
         mainStackView.snp.makeConstraints { make in
             make.top.equalTo(headerView.snp.bottom).offset(24)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(16)
@@ -72,16 +86,42 @@ extension MainViewController {
             make.width.height.equalTo(140)
         }
     }
-   
+    
     @objc
     private func didTapSearchButton() {
         guard let searchedText = headerView.getTextFieldText(),
-                  !searchedText.isEmpty else {
+              !searchedText.isEmpty else {
+            clearBaseView()
+            self.showAlert(title: "Error", message: "Username can not be empty")
             return
         }
-        vm.getUserInfo(with: searchedText) { [weak self] user in
-            self?.centerImageView.kf.setImage(with: URL(string: user.image))
+        guard lastSearchedText != searchedText else {
+            return
         }
+        self.lastSearchedText = searchedText
+        clearBaseView()
+        activityIndicator.startAnimating()
+        getUserInfo(with: searchedText)
+    }
+    
+    func getUserInfo(with searchedText: String) {
+        DispatchQueue.main.async {
+            self.vm.getUserInfo(with: searchedText) { [weak self] result in
+                switch result {
+                case .success(let user):
+                    self?.setup(with: user)
+                case .failure(_):
+                    self?.showAlert(title: "Something went wrong", message: "No user named \(searchedText) was found")
+                    self?.headerView.clearTextField()
+                }
+                self?.activityIndicator.stopAnimating()
+            }
+        }
+    }
+    
+    private func clearBaseView() {
+        mainStackView.removeAllArrangedSubview()
+        userInfoSV.removeAllArrangedSubview()
     }
 }
 
